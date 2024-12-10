@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shut The Box</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <script src="./script.js" defer></script>
+        <link href="./style.css" rel="stylesheet">
+        <link href="./favicon.png" rel="shortcut icon" type="image/x-icon">
+    </head>
+    <body>
+        <h1>Shut The Box Game <i class="bi bi-box-seam"></i></h1>
+        <div id="titleMenu" class="flex">
+            <input id="idInputPlayer1Name" class="playerInput" type="text" value="p1Hoi" autofocus autocomplete="off">
+            <input id="idInputPlayer2Name" class="playerInput" type="text" value="p2yEEt" autofocus autocomplete="off">
+            <button id="idBTNStart">Start The Game</button>
+        </div>
+        <div id="gameBoard" class="flex">
+            <div id="roundInfo" class="flex">
+                <p id="round">Round 1</p>
+                <p id="roundPlayers">P1 vs P2</p>
+                <p id="turn">Player 1's turn</p>
+            </div>
+            <div id="boxHolder" class="flex">
+                <p id="box1" class="box">1</p>
+                <p id="box2" class="box">2</p>
+                <p id="box3" class="box">3</p>
+                <p id="box4" class="box">4</p>
+                <p id="box5" class="box">5</p>
+                <p id="box6" class="box">6</p>
+                <p id="box7" class="box">7</p>
+                <p id="box8" class="box">8</p>
+                <p id="box9" class="box">9</p>
+            </div>
+            <div id="actions" class="flex">
+                <div id="dice" class="flex">
+                    <p id="die1" class="die"><i class="bi bi-dice-1"></i></p>
+                    <p id="die2" class="die"><i class="bi bi-dice-1"></i></p>
+                </div>
+                <p id="diceSum">sum=783</p>
+                <button id="rollBTN" disabled>Roll Dice</button>
+                <button id="bothBTN" disabled>Both</button>
+                <button id="sumBTN" disabled>Sum</button>
+                <button id="endBTN" disabled>End Turn</button>
+            </div>
+        </div>
+        <div id="scoreCard" class="flex">
+            <h2 id="gameWinner"></h2>
+            <h3 id="gameLoser"></h3>
+            <table id="scoreTBL">
+                <thead>
+                    <tr>
+                        <th>Round</th>
+                        <th id="p1NameTBL">Player 1</th>
+                        <th id="p2NameTBL">Player 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--this will be our scorecard-->
+                </tbody>
+            </table>
+            <button id="rePlayBTN" disabled>Play Again?</button>
+        </div>
+    </body>
+</html>

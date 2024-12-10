@@ -1,0 +1,169 @@
+/*basic reset things*/
+:root{
+    --c-red:#FF0000;
+    --c-yellow:#FFFF00;
+    --c-green:#00FF00;
+    --c-cyan:#00FFFF;
+    --c-blue:#0000FF;
+    --c-magenta:#FF00FF;
+    --c-black:#000000;
+    --c-white:#FFFFFF;
+    --s-box:4px 4px 2px;
+    --s-box-r:-3px -3px 4px;
+    --b-basic:2px solid;
+
+    /*origional colors*/
+    --b-p:#00FFFF;
+    --b-1:solid 3px;
+}
+*, *::before, *::after{
+    box-sizing:border-box;
+}
+*{
+    margin:0;
+}
+img{
+    display:block;
+    max-width:100%;
+}
+i{
+    display:block;
+    box-sizing:border-box;
+    width:100%;
+}
+input,button{
+    border:var(--b-basic) var(--c-green);
+    border-radius:3px;
+    box-shadow:var(--s-box) var(--c-blue),var(--s-box-r) var(--c-red);
+    background-color:var(--c-black);
+    color:var(--c-green);
+}
+button[disabled],input:focus-visible{
+    border:var(--b-basic) var(--c-yellow);
+    border-radius:3px;
+    box-shadow:var(--s-box) var(--c-cyan),var(--s-box-r) var(--c-magenta);
+    background-color:var(--c-black);
+    color:var(--c-yellow);
+    text-shadow:var(--s-box) var(--c-cyan),var(--s-box-r) var(--c-magenta);
+}
+body{
+    background-color:var(--c-black);
+}
+/*other styles*/
+.flex{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:10px;
+    gap:10px;
+    flex-wrap:wrap;
+}
+table,th,td{
+    border:var(--b-basic) var(--c-red);
+    border-radius:3px;
+    box-shadow:var(--s-box) var(--c-blue);
+    background-color:var(--c-black);
+    color:var(--c-green);
+    border-collapse:collapse;
+    text-align:center;
+    justify-content:center;
+}
+h1,h2,h3,p,th,tr,button,input{
+    color:var(--c-green);
+    text-shadow:var(--s-box) var(--c-blue),var(--s-box-r) var(--c-red);
+}
+/*special styles*/
+/*title menu styles*/
+#titleMenu{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:10px;
+    gap:10px;
+    flex-wrap:wrap;
+}
+h1 i{
+    display:inline;
+}
+h1{
+    text-align:center;
+    margin:6px auto;
+}
+.playerInput{
+    margin:6px auto;
+}
+/*Game Board styles*/
+#gameBoard{
+    width:100%;
+    display:none;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:10px;
+    gap:10px;
+    flex-wrap:wrap;
+}
+#roundInfo{
+    width:100%;
+    flex-direction:row;
+    flex-wrap:nowrap;
+    justify-content:space-between;
+    align-items:flex-end;
+}
+/*boxes*/
+#boxHolder{
+    width:100%;
+    justify-content:space-between;
+    gap:0px;
+}
+.box{
+    display:inline;
+    text-align:center;
+    align-content:center;
+    height:125px;
+    width:10%;
+    border:solid 3px;
+    border-color:var(--c-green);
+    border-radius:3px;
+    box-shadow:var(--s-box) var(--c-blue),var(--s-box-r) var(--c-red);
+    background-color:var(--c-black);
+    color:var(--c-green);
+    font-size:2rem;
+}
+.shut{
+    border-color:var(--c-yellow);
+    border-radius:3px;
+    box-shadow:var(--s-box) var(--c-cyan),var(--s-box-r) var(--c-magenta);
+    background-color:var(--c-black);
+    color:var(--c-yellow);
+    text-shadow:var(--s-box) var(--c-cyan),var(--s-box-r) var(--c-magenta);
+}
+/*actions*/
+#actions{
+    border:var(--b-1);
+    border-radius:10px;
+}
+.die{
+    font-size:4rem;
+}
+#diceSum{
+    margin-right:auto;
+}
+/*scorecard*/
+#scoreCard{
+    width:100%;
+    display:none;
+    flex-direction:column;
+    justify-content:center;
+    align-content:center;
+}
+#gameWinner,#gameLoser{
+    display:none;
+    width:100%;
+    text-align:center;
+    margin:3px auto;
+}
+#rePlayBTN{
+    display:none;
+}
