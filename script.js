@@ -26,9 +26,6 @@ const roundPAR=document.querySelector("#round");
 const roundPlayersPAR=document.querySelector("#roundPlayers");
 const turnPAR=document.querySelector("#turn");
 
-
-
-
 //variables
 let playerNames=["",""];
 //points for given round, positions of each box
@@ -42,7 +39,6 @@ let roll2=1;
 //total points for each player
 let player1Points=0;
 let player2Points=0;
-
 
 //functions
 const getRandomNumber=()=>Math.floor(Math.random()*6)+1;
@@ -98,17 +94,14 @@ function buildRow(round,pts){
     const rowH=document.createElement("th");
     const p1td=document.createElement("td");
     const p2td=document.createElement("td");
-
     newRow.id=`round${round}`;
     rowH.textContent=`Round ${round}`;
     p1td.className="p1Pts";
     p1td.textContent=pts;
     p2td.className="p2Pts";
-
     newRow.insertAdjacentElement("beforeend",rowH);
     newRow.insertAdjacentElement("beforeend",p1td);
     newRow.insertAdjacentElement("beforeend",p2td);
-
     return newRow;
 };
 
@@ -120,7 +113,6 @@ function resetBoard(){
         box.className="box";
         box.textContent=id+1;
     });
-
 };
 
 //changes the state of what's displayed
@@ -141,8 +133,6 @@ function changeDisplay(state){
         gameWinner.style.display="block";
         gameLoser.style.display="block";
         rePlayBTN.style.display="block";
-    }else if(state===3){
-
     };
 };
 
@@ -169,7 +159,6 @@ function gameOver(){
         changeDisplay(2);
         rePlayBTN.disabled=false;
     };
-
 };
 
 //code start
@@ -268,7 +257,6 @@ endBTN.addEventListener('click',function(){
     };
     updateRoundInfo(roundNumber,playerTurn);
     rollBTN.disabled=false;
-
 });//end endBTN listener
 
 //rePlayBTN listener
